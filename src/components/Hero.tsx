@@ -38,17 +38,17 @@ export default function Hero() {
   const line1 = "Too Tired to Clean";
   const line2 = "Your House or Office?";
 
-  // Helper function to render text without breaking words
+  
   const renderWords = (text: string) => {
     return text.split(" ").map((word, wordIndex) => (
-      /* The whitespace-nowrap here is the secret sauce */
+
       <span key={wordIndex} className="inline-block whitespace-nowrap">
         {word.split("").map((char, charIndex) => (
           <motion.span key={charIndex} variants={letter} className="inline-block">
             {char}
           </motion.span>
         ))}
-        {/* Add a space after each word except the last one */}
+
         <span className="inline-block">&nbsp;</span>
       </span>
     ));
