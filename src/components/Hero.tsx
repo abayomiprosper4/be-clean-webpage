@@ -1,3 +1,5 @@
+"use client";
+
 import { Sparkles } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 
@@ -27,15 +29,30 @@ export default function Hero() {
   };
 
   const letter: Variants = {
-    hidden: { opacity: 0, display: 'none' },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      display: 'inline-block',
     },
   };
 
   const line1 = "Too Tired to Clean";
   const line2 = "Your House or Office?";
+
+  // Helper function to render text without breaking words
+  const renderWords = (text: string) => {
+    return text.split(" ").map((word, wordIndex) => (
+      /* The whitespace-nowrap here is the secret sauce */
+      <span key={wordIndex} className="inline-block whitespace-nowrap">
+        {word.split("").map((char, charIndex) => (
+          <motion.span key={charIndex} variants={letter} className="inline-block">
+            {char}
+          </motion.span>
+        ))}
+        {/* Add a space after each word except the last one */}
+        <span className="inline-block">&nbsp;</span>
+      </span>
+    ));
+  };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#fffbf4] via-white to-[#e9e5ff] overflow-hidden">
@@ -52,19 +69,11 @@ export default function Hero() {
             className="text-5xl md:text-7xl lg:text-8xl font-bold my-8 leading-tight text-[#8B5CF6]"
           >
             <div className="block">
-              {line1.split("").map((char, index) => (
-                <motion.span key={`line1-${char}-${index}`} variants={letter}>
-                  {char === " " ? "\u00A0" : char}
-                </motion.span>
-              ))}
+              {renderWords(line1)}
             </div>
 
             <div className="block">
-              {line2.split("").map((char, index) => (
-                <motion.span key={`line2-${char}-${index}`} variants={letter}>
-                  {char === " " ? "\u00A0" : char}
-                </motion.span>
-              ))}
+              {renderWords(line2)}
             </div>
           </motion.h1>
 
