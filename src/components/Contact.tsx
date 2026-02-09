@@ -86,7 +86,7 @@ export default function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-lg font-semibold text-[#8B5CF6] mb-2">
+                  <label htmlFor="name" className="block text-md font-semibold text-[#8B5CF6] mb-2">
                     Your Name *
                   </label>
                   <input
@@ -96,13 +96,13 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-6 py-4 rounded-xl border-2 border-gray-200 focus:border-[#8B5CF6] focus:outline-none text-lg transition-colors"
+                    className="w-full px-6 py-2 rounded-xl border-2 border-gray-200 focus:border-[#8B5CF6] focus:outline-none text-lg transition-colors"
                     placeholder="John Doe"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-lg font-semibold text-[#8B5CF6] mb-2">
+                  <label htmlFor="email" className="block text-md font-semibold text-[#8B5CF6] mb-2">
                     Your Email *
                   </label>
                   <input
@@ -112,13 +112,13 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-6 py-4 rounded-xl border-2 border-gray-200 focus:border-[#8B5CF6] focus:outline-none text-lg transition-colors"
+                    className="w-full px-6 py-2 rounded-xl border-2 border-gray-200 focus:border-[#8B5CF6] focus:outline-none text-lg transition-colors"
                     placeholder="john@example.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-lg font-semibold text-[#8B5CF6] mb-2">
+                  <label htmlFor="phone" className="block text-md font-semibold text-[#8B5CF6] mb-2">
                     Phone Number
                   </label>
                   <input
@@ -127,13 +127,13 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-6 py-4 rounded-xl border-2 border-gray-200 focus:border-[#8B5CF6] focus:outline-none text-lg transition-colors"
+                    className="w-full px-6 py-2 rounded-xl border-2 border-gray-200 focus:border-[#8B5CF6] focus:outline-none text-lg transition-colors"
                     placeholder="+1 (613) 123-4567"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-lg font-semibold text-[#8B5CF6] mb-2">
+                  <label htmlFor="message" className="block text-md font-semibold text-[#8B5CF6] mb-2">
                     Your Message *
                   </label>
                   <textarea
@@ -143,7 +143,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-6 py-4 rounded-xl border-2 border-gray-200 focus:border-[#8B5CF6] focus:outline-none text-lg transition-colors resize-none"
+                    className="w-full px-6 py-2 rounded-xl border-2 border-gray-200 focus:border-[#8B5CF6] focus:outline-none text-lg transition-colors resize-none"
                     placeholder="Tell us about your cleaning needs..."
                   />
                 </div>
@@ -158,7 +158,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-8 py-5 rounded-xl text-xl font-bold shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-3"
+                  className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-4 py-4 rounded-xl text-xl font-bold shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-3"
                 >
                   {status === 'loading' ? (
                     <>
@@ -172,16 +172,12 @@ export default function Contact() {
                     </>
                   )}
                 </button>
-
-                <p className="text-center text-gray-500 text-sm">
-                  * Required fields
-                </p>
               </form>
             )}
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-gray-600 text-lg mb-4">
+            <p className="text-gray-600 text-2xl font-bold my-7">
               Prefer to reach out directly?
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

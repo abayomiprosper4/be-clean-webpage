@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xl font-bold mb-4">Contact Info</h4>
+            <h4 className="text-md font-bold mb-4">Contact Info</h4>
             <div className="space-y-3">
               <a href="tel:+16138895658" className="flex items-center gap-3 hover:text-[#FDB34B] transition-colors">
                 <Phone className="w-5 h-5" />
@@ -40,13 +40,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xl font-bold mb-4">Business Hours</h4>
+            <h4 className="text-md font-bold mb-4">Business Hours</h4>
             <div className="space-y-2 text-white/90">
               <p>Monday - Saturday</p>
               <p className="font-semibold text-white">8:00 AM - 6:00 PM</p>
-              <p className="mt-4 text-[#FDB34B] font-semibold">
-                10% off for first time clients!
-              </p>
             </div>
           </div>
         </div>

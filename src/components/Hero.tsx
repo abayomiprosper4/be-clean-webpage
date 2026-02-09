@@ -34,7 +34,6 @@ export default function Hero() {
     },
   };
 
-  // Split the text into two lines
   const line1 = "Too Tired to Clean";
   const line2 = "Your House or Office?";
 
@@ -50,9 +49,8 @@ export default function Hero() {
             variants={sentence}
             initial="hidden"
             animate="visible"
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight text-[#8B5CF6]"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold my-8 leading-tight text-[#8B5CF6]"
           >
-            {/* First Paragraph/Line */}
             <div className="block">
               {line1.split("").map((char, index) => (
                 <motion.span key={`line1-${char}-${index}`} variants={letter}>
@@ -61,7 +59,6 @@ export default function Hero() {
               ))}
             </div>
 
-            {/* Second Paragraph/Line */}
             <div className="block">
               {line2.split("").map((char, index) => (
                 <motion.span key={`line2-${char}-${index}`} variants={letter}>
@@ -75,10 +72,10 @@ export default function Hero() {
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 3.5 }} // Adjusted delay to account for the longer typing time
+            transition={{ delay: 3.5 }} 
             className="flex flex-col items-center"
           >
-            <div className="flex items-center gap-3 my-8">
+            <div className="flex items-center gap-3 my-10">
               <Sparkles className="w-8 h-8 text-[#FDB34B]" fill="#FDB34B" />
               <p className="text-2xl animate-bounce infinite md:text-3xl text-gray-700 font-medium">
                 Just call us!
@@ -87,10 +84,6 @@ export default function Hero() {
             </div>
 
             <div className='items-center lg:flex md:block sm:block gap-4 my-12'>
-              <div className="bg-[#8B5CF6] text-white px-8 py-4 lg:mb-0 md:mb-5 sm:mb-4 rounded-full text-xl md:text-2xl font-semibold shadow-xl transform hover:scale-105 transition-transform">
-                10% off for first time clients!
-              </div>
-
               <button
                 onClick={scrollToContact}
                 className="bg-[#FDB34B] hover:bg-[#f5a831] text-white px-10 py-5 rounded-full text-xl font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300"
