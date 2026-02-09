@@ -71,9 +71,6 @@ export default function CallToAction() {
             >
               Book Your Cleaning Now
             </button>
-            <p className="mt-6 text-[#FDB34B] font-semibold text-lg">
-              Remember: 10% off for first time clients!
-            </p>
           </div>
         </div>
       </div>
