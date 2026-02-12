@@ -175,26 +175,6 @@ export default function Contact() {
               </form>
             )}
           </div>
-
-          <div className="mt-12 text-center">
-            <p className="text-gray-600 text-2xl font-bold my-7">
-              Prefer to reach out directly?
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+16138895658"
-                className="inline-flex items-center justify-center gap-2 bg-[#FDB34B] hover:bg-[#f5a831] text-white px-6 py-3 rounded-full font-semibold transition-colors"
-              >
-                Call: +1 (613) 889-5658
-              </a>
-              <a
-                href="mailto:be.cleann27@gmail.com"
-                className="inline-flex items-center justify-center gap-2 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-6 py-3 rounded-full font-semibold transition-colors"
-              >
-                Email: be.cleann27@gmail.com
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>

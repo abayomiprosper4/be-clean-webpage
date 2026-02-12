@@ -38,7 +38,7 @@ export default function Navigation() {
               alt="Be Clean Logo."
               className="w-[110px] h-[110px] object-contain"
             />
-            <span className={`text-xl font-bold ${isScrolled ? 'text-[#8B5CF6]' : 'text-[#8B5CF6]'}`}>
+            <span className={`text-xl font-bold font-serif ${isScrolled ? 'text-[#8B5CF6]' : 'text-[#8B5CF6]'}`}>
               Be Clean
             </span>
           </button>
