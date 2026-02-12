@@ -8,11 +8,11 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center">
               <img
                 src="/logoooo.svg"
                 alt="Be Clean Logo"
-                className="w-12 h-12"
+                className="w-[120px] h-[120px] object-contain"
               />
               <h3 className="text-2xl font-bold">Be Clean</h3>
             </div>

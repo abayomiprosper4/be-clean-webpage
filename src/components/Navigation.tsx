@@ -23,20 +23,20 @@ export default function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white shadow-lg py-4'
-          : 'bg-transparent py-6'
+          ? 'bg-white shadow-lg py-1'
+          : 'bg-transparent py-1'
       }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection('home')}
-            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            className="flex items-center hover:opacity-80 transition-opacity"
           >
             <img
               src="/logoooo.svg"
               alt="Be Clean Logo."
-              className="w-14 h-14"
+              className="w-[110px] h-[110px] object-contain"
             />
             <span className={`text-xl font-bold ${isScrolled ? 'text-[#8B5CF6]' : 'text-[#8B5CF6]'}`}>
               Be Clean
